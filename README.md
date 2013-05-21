@@ -7,6 +7,7 @@ This project utilizes grunt.js and Sass as a workflow solution for creating opti
 3. Enter the following to install: `npm install` *(If there is an error, try `sudo npm install`)*
 4. Then run: `grunt watch`
 5. To end the `grunt watch` process, press *CTRL-C* in the terminal window. To manually publish with grunt, in the terminal simply run: `grunt`
+6. Update the file paths of the last two lines in the `<head>` for icons.fallback.css and lte-ie7.js
 
 Now you are ready for developming and making updates. Do not edit the .css files (/css/processed/), instead update the .scss files (/css/sass/). For Javascript, edit the files in the **js/custom** directory.
 
