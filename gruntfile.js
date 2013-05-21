@@ -119,14 +119,14 @@ module.exports = function(grunt) {
 
     grunticon: {
       options: {
-        src: 'css/custom/icons',
-        dest: 'css/min/icons'
+        src: 'css/custom/svg',
+        dest: 'css/min/svg'
       }
     },
 
     svgo: {
       optimize: {
-        files: 'css/custom/icons/*.svg'
+        files: 'css/min/svg/*.svg'
       }
     },
 
@@ -141,6 +141,7 @@ module.exports = function(grunt) {
     compass: {
       dist: {
         options: {
+          relativeAssets: true,
           sassDir: 'css/sass',
           cssDir: 'css/processed'
         }
