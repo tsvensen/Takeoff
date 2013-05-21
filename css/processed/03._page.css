@@ -1,0 +1,69 @@
+/**
+ * page.scss
+ */
+/* line 9, ../sass/03._page.scss */
+.main {
+  background: #d4d2c8;
+  -webkit-box-shadow: inset 0 16px 15px -15px #79746b;
+  -moz-box-shadow: inset 0 16px 15px -15px #79746b;
+  box-shadow: inset 0 16px 15px -15px #79746b;
+  /* control the github ribbion placement */
+  position: relative;
+  padding-top: 5em;
+}
+@media (min-width: 35em) {
+  /* line 9, ../sass/03._page.scss */
+  .main {
+    position: static;
+    padding-top: 3em;
+  }
+}
+@media (min-width: 45em) {
+  /* line 9, ../sass/03._page.scss */
+  .main {
+    position: static;
+  }
+}
+@media (min-width: 72em) {
+  /* line 9, ../sass/03._page.scss */
+  .main {
+    position: relative;
+    -webkit-box-shadow: inset 0 13px 25px -15px #79746b;
+    -moz-box-shadow: inset 0 13px 25px -15px #79746b;
+    box-shadow: inset 0 13px 25px -15px #79746b;
+  }
+}
+
+/* line 25, ../sass/03._page.scss */
+.author {
+  overflow: hidden;
+  color: #bfbeb3;
+  background: #282623;
+  width: 100%;
+  margin-top: 1.5em;
+}
+/* line 32, ../sass/03._page.scss */
+.author iframe {
+  display: inline-block;
+  *display: block;
+  *zoom: 1;
+}
+/* line 33, ../sass/03._page.scss */
+.author span {
+  display: inline-block;
+  *display: block;
+  *zoom: 1;
+  vertical-align: top;
+  padding: 5px 10px 0 0;
+}
+
+/* line 41, ../sass/03._page.scss */
+.wrapper-details {
+  color: #bfbeb3;
+  background: #43403b;
+  padding: 3em 0;
+}
+/* line 46, ../sass/03._page.scss */
+.wrapper-details h4 {
+  color: #a8a697;
+}

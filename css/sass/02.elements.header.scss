@@ -1,0 +1,125 @@
+/**
+ * elements.header.scss
+ */
+@import '_modules/vars';
+@import '_modules/mixins';
+
+
+header {
+  position: relative;
+  background: $bg-light url($img-texture-light) repeat 0 0;
+}
+
+.container-logo {
+  background: lighten($bg-light, 10%);
+
+  @include mq($header-mq) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 10;
+    background: transparent;
+    width: 44%;
+    margin-left: -22%;
+  }
+
+  @include mq($M) {
+    width: 40%;
+    margin-left: -20%;
+  }
+}
+
+.logo {
+  @include image-replacement();
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.icon-logo {
+  @include fixed-ratio(360px 174px); // width height
+}
+
+
+.container-hero {
+  @include mq($header-mq) { min-height: $spacing *7; }
+  @include mq($M)         { min-height: $spacing *11; }
+  @include mq($L)         { min-height: $spacing *18; }
+}
+
+#hero {
+  margin-top: -12%;
+  @include mq($header-mq) {
+    margin-top: 0;
+  }
+}
+
+
+.wrapper-highlight {
+  @include mq($L) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: $bg-light url($img-texture-light) repeat 0 0;
+    margin-right: -50%;
+    height: 100%;
+  }
+}
+
+.vertical-align {
+  @include mq($L) {
+    height: 100%;
+    margin-top: -50%;
+  }
+}
+
+.container-highlight {
+  text-shadow: 1px 1px 0px $text-shadow-light;
+
+  span { display: block; }
+
+  @include mq($M) {
+    span { display: inline; }
+    p { line-height: 1.375; }
+  }
+
+  @include mq($L) {
+    margin-top: -50%; // Used with .vertical-align to vertically align (about, pulled up 4% higher)
+
+    span { display: block; }
+    p {
+      line-height: 1.5;
+      padding: 0;
+    }
+  }
+}
+
+.callout-project {
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 1;
+  color: $text-light;
+  /*background: $bg-dark;*/
+  background: darken($bg-dark, 10%);
+  width: 100%;
+
+  @include mq($M) {
+    white-space: nowrap;
+  }
+
+  @include mq($L) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    white-space: normal;
+  }
+
+  em { font-style: normal; }
+  em,
+  span {
+    display: block;
+    white-space: nowrap;
+    @include mq($M) { @include inline-block(); }
+    @include mq($L) { display: block; }
+  }
+}

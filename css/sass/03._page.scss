@@ -1,0 +1,49 @@
+/**
+ * page.scss
+ */
+@import '_modules/vars';
+@import '_modules/mixins';
+@import "compass/css3/box-shadow";
+
+
+.main {
+  background: $bg-page;
+
+  @include single-box-shadow(lighten($bg-dark, 20%), 0, 16px, 15px, -15px, inset);
+
+  /* control the github ribbion placement */
+  position: relative;
+  padding-top:    $spacing * (10/3); // 5em
+  @include mq($header-mq) { position: static; padding-top: $spacing *2; }
+  @include mq($M)         { position: static; }
+  @include mq($L)         { position: relative;
+    @include single-box-shadow(lighten($bg-dark, 20%), 0, 13px, 25px, -15px, inset);
+  }
+}
+
+
+.author {
+  overflow: hidden;
+  color: $text-light;
+  background: darken($bg-dark, 10%);
+  width: 100%;
+  margin-top: $spacing;
+
+  iframe { @include inline-block(); }
+  span {
+    @include inline-block();
+    vertical-align: top;
+    padding: 5px 10px 0 0;
+  }
+}
+
+
+.wrapper-details {
+  color: $text-light;
+  background: $bg-dark;
+  padding: ($spacing *2) 0;
+
+  h4 {
+    color: darken($text-light, 10%);
+  }
+}
