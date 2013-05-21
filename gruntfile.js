@@ -141,6 +141,7 @@ module.exports = function(grunt) {
     compass: {
       dist: {
         options: {
+          relativeAssets: true,
           sassDir: 'css/sass',
           cssDir: 'css/processed'
         }
