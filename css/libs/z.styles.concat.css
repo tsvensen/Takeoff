@@ -1562,8 +1562,8 @@ a:hover, a:active {
  */
 @font-face {
   font-family: "icomoon";
-  src: url('/css/processed/fonts/../../fonts/icomoon/fonts/icomoon.eot');
-  src: url('/css/processed/fonts/../../fonts/icomoon/fonts/icomoon.eot?#iefix') format('eot'), url('/css/processed/fonts/../../fonts/icomoon/fonts/icomoon.woff') format('woff'), url('/css/processed/fonts/../../fonts/icomoon/fonts/icomoon.ttf') format('truetype'), url('/css/processed/fonts/../../fonts/icomoon/fonts/icomoon.svg') format('svg');
+  src: url('fonts/../../fonts/icomoon/fonts/icomoon.eot');
+  src: url('fonts/../../fonts/icomoon/fonts/icomoon.eot?#iefix') format('eot'), url('fonts/../../fonts/icomoon/fonts/icomoon.woff') format('woff'), url('fonts/../../fonts/icomoon/fonts/icomoon.ttf') format('truetype'), url('fonts/../../fonts/icomoon/fonts/icomoon.svg') format('svg');
 }
 
 /* line 18, ../sass/01._typography.scss */
