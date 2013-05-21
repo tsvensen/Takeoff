@@ -1,0 +1,10 @@
+/**
+ * elements.footer.scss
+ */
+/* line 8, ../sass/02.elements.footer.scss */
+footer {
+  color: #cccccc;
+  text-align: center;
+  background: #555555;
+  padding: 3em 0;
+}

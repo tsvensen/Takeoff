@@ -1,0 +1,18 @@
+/**
+ * elements.header.scss
+ */
+/* line 8, ../sass/02.elements.header.scss */
+header {
+  position: relative;
+  background: #dddddd;
+}
+
+/* line 13, ../sass/02.elements.header.scss */
+.header-logo {
+  float: left;
+}
+/* line 16, ../sass/02.elements.header.scss */
+.header-logo h1 {
+  margin: 0;
+  padding: 0;
+}

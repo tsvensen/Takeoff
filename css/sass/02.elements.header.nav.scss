@@ -1,0 +1,80 @@
+/**
+ * elements.header.nav.scss
+ */
+@import '_modules/vars';
+@import '_modules/mixins';
+
+
+/*! responsive-nav.js v1.0.14 by @viljamis */
+#nav-toggle {
+  float: right;
+  font-weight: bold;
+  color: $text-dark;
+  margin: $spacing $spacing 0 0;
+
+  &:hover { color: $link-dark; }
+
+  @include mq($M) {
+    display: none;
+  }
+}
+
+
+.js .header-page #nav-header {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.header-page #nav-header {
+  width: 100%;
+
+  &.opened { max-height: 9999px; }
+
+  ul {
+    background: darken($bg-light, 3%);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: block;
+    border-top: 1px solid darken($bg-light, 10%);
+    width: 100%;
+  }
+
+  a {
+    display: block;
+    padding: ($spacing /2) $spacing;
+  }
+}
+
+
+@include mq($M) {
+  .js .header-page #nav-header {
+    position: relative;
+    float: right;
+    max-height: none;
+  }
+
+  .header-page #nav-header {
+    width: auto;
+    padding: $spacing $spacing 0 0;
+
+    li {
+      float: left;
+      border: 0;
+      width: auto;
+      margin-left: $spacing;
+    }
+
+    a {
+      display: inline;
+      padding: 0;
+    }
+  }
+}

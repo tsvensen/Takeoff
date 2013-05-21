@@ -1,0 +1,32 @@
+{
+  "name": "New Project",
+  "version": "0.0.1",
+  "description": "My new project.",
+  "main": "gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/"
+  },
+  "keywords": [
+    "grunt",
+    "takeoff"
+  ],
+  "author": "Your Name",
+  "license": "",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.1.3",
+    "grunt-contrib-jshint": "~0.3.0",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-csslint": "~0.1.2",
+    "grunt-contrib-cssmin": "~0.5.0",
+    "grunt-smushit": "~0.4.0",
+    "grunt-contrib-sass": "~0.3.0",
+    "grunt-contrib-compass": "~0.1.3",
+    "grunt-grunticon": "~0.2.1",
+    "grunt-contrib-clean": "~0.4.1",
+    "svgo-grunt": "0.0.3"
+  }
+}

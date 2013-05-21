@@ -1,0 +1,13 @@
+/**
+ * elements.footer.scss
+ */
+@import '_modules/vars';
+@import '_modules/mixins';
+
+
+footer {
+  color: $text-light;
+  text-align: center;
+  background: $bg-dark;
+  padding: ($spacing *2) 0;
+}

@@ -1,0 +1,20 @@
+/**
+ * elements.header.scss
+ */
+@import '_modules/vars';
+@import '_modules/mixins';
+
+
+header {
+  position: relative;
+  background: $bg-light;
+}
+
+.header-logo {
+  float: left;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,115 @@
+/**
+ * typography.scss
+ */
+@font-face {
+  font-family: "icomoon";
+  src: url('/css/processed/fonts/../../fonts/icomoon/fonts/icomoon.eot');
+  src: url('/css/processed/fonts/../../fonts/icomoon/fonts/icomoon.eot?#iefix') format('eot'), url('/css/processed/fonts/../../fonts/icomoon/fonts/icomoon.woff') format('woff'), url('/css/processed/fonts/../../fonts/icomoon/fonts/icomoon.ttf') format('truetype'), url('/css/processed/fonts/../../fonts/icomoon/fonts/icomoon.svg') format('svg');
+}
+
+/* line 18, ../sass/01._typography.scss */
+.icon-star, .icon-twitter, .icon-github {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 29, ../sass/01._typography.scss */
+.icon-twitter:before {
+  content: "\e000";
+}
+
+/* line 30, ../sass/01._typography.scss */
+.icon-github:before {
+  content: "\e001";
+}
+
+/* line 31, ../sass/01._typography.scss */
+.icon-star:before {
+  content: "\e002";
+}
+
+/* line 34, ../sass/01._typography.scss */
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  color: #444444;
+  font-size: 0.9375em;
+  /* 15px */
+}
+@media (min-width: 35em) {
+  /* line 34, ../sass/01._typography.scss */
+  body {
+    font-size: 1em;
+    /* 16px */
+  }
+}
+@media (min-width: 55em) {
+  /* line 34, ../sass/01._typography.scss */
+  body {
+    font-size: 1.0625em;
+    /* 17px */
+  }
+}
+
+/* line 46, ../sass/01._typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 52, ../sass/01._typography.scss */
+h1 {
+  font-size: 2.5em;
+  line-height: 1.2;
+  padding-bottom: 0.4em;
+}
+
+/* line 58, ../sass/01._typography.scss */
+h2 {
+  font-size: 2em;
+  line-height: 1.25;
+  padding-bottom: 0.25em;
+}
+
+/* line 64, ../sass/01._typography.scss */
+h3 {
+  font-size: 1.5em;
+  line-height: 1.33333;
+  padding-bottom: 0.66667em;
+}
+
+/* line 70, ../sass/01._typography.scss */
+h4 {
+  font-size: 1.25em;
+  line-height: 1.2;
+  padding-top: 0.3em;
+  padding-bottom: 0.9em;
+}
+
+/* line 78, ../sass/01._typography.scss */
+p {
+  margin: 0;
+  padding: 0 0 1.5em;
+}
+
+/* line 83, ../sass/01._typography.scss */
+ul, ol, dl {
+  margin: 0;
+  padding: 0 0 0.75em;
+}
+
+/* line 88, ../sass/01._typography.scss */
+ul, ol, dl {
+  margin-left: 1.5em;
+}
+
+/* line 90, ../sass/01._typography.scss */
+code {
+  font-size: 0.9375em;
+}
