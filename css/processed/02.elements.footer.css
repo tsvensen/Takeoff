@@ -1,0 +1,14 @@
+/**
+ * elements.footer.scss
+ */
+/* line 8, ../sass/02.elements.footer.scss */
+footer {
+  position: relative;
+  color: #bfbeb3;
+  background: #282623;
+  padding: 2.25em 0;
+}
+/* line 14, ../sass/02.elements.footer.scss */
+footer p {
+  font-size: 0.9375em;
+}

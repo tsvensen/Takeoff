@@ -1,0 +1,69 @@
+/**
+ * global.scss
+ */
+@import '_modules/vars';
+@import '_modules/mixins';
+@import '_vendor/grid.generator';
+
+
+/********************************************************** Viewport */
+
+@-webkit-viewport{width:device-width}
+   @-moz-viewport{width:device-width}
+    @-ms-viewport{width:device-width}
+     @-o-viewport{width:device-width}
+        @viewport{width:device-width}
+
+
+/********************************************************** Grid */
+
+// Generate the grid
+@include gridGenerator(
+  ($s-breakpoint, $m-breakpoint, $l-breakpoint), // breakpoints
+  'em',         // breakpoint type 'px' or 'em'
+  12,           // number of grid columns
+  $spacing,     // outer padding
+  ($spacing /2) // inner padding
+  // use default prefixes
+);
+
+
+// Additional Grid Classes
+.grid-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+
+/********************************************************** Box Sizing *
+  Box Sizing
+  Apply a natural box layout model to all elements - http://paulirish.com/2012/box-sizing-border-box-ftw/
+  border-box polyfill for IE 6/7: https://github.com/Schepp/box-sizing-polyfill#readme
+*/
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;  *behavior: url(boxsizing.htc); }
+
+/** {*/
+  /*-webkit-transition: all 0.4s ease-out; */
+     /*-moz-transition: all 0.4s ease-out; */
+       /*-o-transition: all 0.4s ease-out; */
+          /*transition: all 0.4s ease-out; */
+/*}*/
+
+::-moz-selection { background: $bg-dark; color: $text-light; }
+::selection { background: $bg-dark; color: $text-light; }
+
+body {
+  background: lighten($bg-light, 10%);
+}
+
+img { max-width: 100%; }
+
+a {
+  color: $link-dark;
+  text-decoration: none;
+  @include link-each-pseudo-element($link-dark, $link-dark, $link-dark-hover, $link-dark-hover);
+
+  &:focus { outline: thin dotted; } 
+  &:hover, &:active { outline: 0; }
+}

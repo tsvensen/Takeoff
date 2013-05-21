@@ -1,0 +1,51 @@
+/**
+ * elements.scss
+ */
+@import '_modules/vars';
+@import '_modules/mixins';
+
+
+p {
+  &.description {
+    padding-top: $spacing * 0.75;
+    padding-bottom: 0;
+  }
+}
+
+
+.container {
+  overflow: hidden;
+}
+
+.callout,
+.highlight {
+  font-size: $font-size-h4;
+  line-height: get-multiplier(24, $font-size-h4);
+  color: lighten($text-dark, 10%);
+  text-align: center;
+
+  /*@include mq($L) {*/
+    /*font-size: 0.9 * $font-size-base;*/
+  /*}*/
+  .icon {
+    // get the contextual multiplier to set the EM font size, passing in the H3 value in pixels (without unit suffix)
+    font-size: get-multiplier(strip-units($font-size-h2 * $vertical-rhythm-base), $font-size-h4) +em;
+  }
+}
+
+
+.btn {
+  @include inline-block();
+  color: $text-light;
+  // text-shadow: -1px -1px 1px #777;
+  // background: #43B8F2;
+  background: #555;
+  margin: 0 .1em;
+  padding: .2em .5em;
+
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+
+  @include link-each-pseudo-element($text-light, $text-light, $text-light, $text-light);
+  &:hover { background: $link-dark; }
+}

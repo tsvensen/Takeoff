@@ -1,0 +1,17 @@
+/**
+ * elements.footer.scss
+ */
+@import '_modules/vars';
+@import '_modules/mixins';
+
+
+footer {
+  position: relative;
+  color: $text-light;
+  background: darken($bg-dark, 10%);
+  padding: ($spacing *1.5) 0;
+
+  p {
+    font-size: $font-size-base *0.9375;
+  }
+}

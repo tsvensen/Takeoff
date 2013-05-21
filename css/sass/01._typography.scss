@@ -1,0 +1,114 @@
+/**
+ * typography.scss
+ */
+@import '_modules/vars';
+@import '_modules/mixins';
+@import 'compass/css3/font-face';
+
+
+@include font-face('icomoon',
+  font-files(
+    '../../fonts/icomoon/fonts/icomoon.woff',
+    '../../fonts/icomoon/fonts/icomoon.ttf',
+    '../../fonts/icomoon/fonts/icomoon.svg'),
+    '../../fonts/icomoon/fonts/icomoon.eot'
+  );
+
+
+.icon-star, .icon-twitter, .icon-github {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+  .icon-twitter:before { content: "\e000"; }
+  .icon-github:before  { content: "\e001"; }
+  .icon-star:before    { content: "\e002"; }
+
+
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  color: $text-dark;
+
+  // Set font sizes across breakpoints for readability 
+  // TODO: adjust line-heights?
+
+                    font-size: $font-size-base *0.9375; /* 15px */
+  @include mq($M) { font-size: $font-size-base;         /* 16px */ }
+  @include mq($L) { font-size: $font-size-base *1.0625; /* 17px */ }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif; 
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: $font-size-h1;   // 40px
+  line-height:    get-multiplier(48, $font-size-h1);
+  padding-bottom: get-multiplier(16, $font-size-h1) +em;
+}
+
+h2 {
+  font-size: $font-size-h2;   // 32px
+  line-height:    get-multiplier(40, $font-size-h2);
+  padding-bottom: get-multiplier(8,  $font-size-h2) +em;
+}
+
+h3 {
+  font-size: $font-size-h3;   // 24px
+  line-height:    get-multiplier(32, $font-size-h3);
+  padding-bottom: get-multiplier(16, $font-size-h3) +em;
+}
+
+h4 {
+  font-size: $font-size-h4;   // 20px
+  line-height:    get-multiplier(24, $font-size-h4);
+  padding-top:    get-multiplier( 6, $font-size-h4) +em;
+  padding-bottom: get-multiplier(18, $font-size-h4) +em;
+  color: lighten($text-dark, 10%);
+}
+
+
+p {
+  margin: 0;
+  padding: 0 0 $spacing;
+}
+
+ul, ol, dl {
+  margin: 0;
+  padding: 0 0 ($spacing /2);
+}
+
+p  ul,
+ul ul,
+ol ul,
+p  ol,
+ul ol,
+ol ol { padding-bottom: 0; }
+
+
+ul, ol, dl { margin-left: $spacing; }
+
+.list-padded {
+  ul,
+  ol {
+    padding-top: $spacing /2;
+    margin-bottom: -1 * ($spacing /2);
+  }
+  li { padding-bottom: $spacing /2; }
+}
+
+code { font-size: $font-size-base *0.9375; }
+
+strong {
+  color: lighten($text-dark, 10%);
+}

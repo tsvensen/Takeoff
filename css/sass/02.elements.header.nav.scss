@@ -1,0 +1,46 @@
+/**
+ * elements.header.nav.scss
+ */
+@import '_modules/vars';
+@import '_modules/mixins';
+
+
+#menu-toggle {
+  float: right;
+  font-weight: bold;
+  color: $text-light;
+  @include link-each-pseudo-element($text-light, $text-light, $link-dark, $link-dark);
+  margin: $spacing;
+
+  @include mq($L) {
+    display: none;
+  }
+}
+
+nav {
+  float: left;
+  background: #000;
+  width: 100%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    @include inline-block();
+  }
+
+  a {
+    @include inline-block();
+    color: $text-light;
+    @include link-all-pseudo-elements($text-light);
+
+    padding: .3em .5em;
+
+    &.nav-text-link {
+      color: $link-dark;
+      &:hover { color: $link-dark-hover; }
+    }
+  }
+}
