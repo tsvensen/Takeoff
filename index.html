@@ -24,13 +24,18 @@
   <!-- Optionally use Modernizr without Respond.js -->
   <!-- <script src="js/vendor/modernizr-2.6.2.js"></script> -->
 
-  <!-- Unicode CSS Loader -->
+  <!-- Unicode CSS Loader : updated to add pathname within IIFE -->
   <script>/* grunticon Stylesheet Loader | https://github.io/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
-  window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!!t.document.createElementNS&&!!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect,A=function(A){var o=t.document.createElement("link"),r=t.document.getElementsByTagName("script")[0];o.rel="stylesheet",o.href=e[A&&n?0:A?1:2],r.parentNode.insertBefore(o,r)},o=new t.Image;o.onerror=function(){A(!1)},o.onload=function(){A(1===o.width&&1===o.height)},o.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};
-  grunticon( [ "/css/min/svg/icons.data.svg.css", "/css/min/svg/icons.data.png.css", "/css/min/svg/icons.fallback.css" ] );</script>
-  <noscript><link href="/css/min/svg/icons.fallback.css" rel="stylesheet"></noscript>
+  (function() {
+    var pathname = window.location.pathname,
+        path =  pathname.substring(0, pathname.lastIndexOf("/"));
+    window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!!t.document.createElementNS&&!!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect,A=function(A){var o=t.document.createElement("link"),r=t.document.getElementsByTagName("script")[0];o.rel="stylesheet",o.href=e[A&&n?0:A?1:2],r.parentNode.insertBefore(o,r)},o=new t.Image;o.onerror=function(){A(!1)},o.onload=function(){A(1===o.width&&1===o.height)},o.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};
+    grunticon( [ path +"/css/min/svg/icons.data.svg.css", path +"/css/min/svg/icons.data.png.css", path +"/css/min/svg/icons.fallback.css" ] );
+  })();
+  </script>
+  <noscript><link href="/Takeoff/css/min/svg/icons.fallback.css" rel="stylesheet"></noscript>
 
-  <!--[if lte IE 7]><script src="fonts/iconfont/lte-ie7.js"></script><![endif]-->
+  <!--[if lte IE 7]><script src="/Takeoff/css/fonts/icomoon/lte-ie7.js"></script><![endif]-->
 </head>
 <body>
 
@@ -98,6 +103,8 @@
           </li>
           <li>It's recommended to have <code>grunt watch</code> running while coding. To end the `grunt watch` process, press <strong>CTRL-C</strong> in the terminal window</li>
           <li>Build the project referencing the <a href="#grunt-tasks">Grunt Tasks</a></li>
+          <li>Make sure to update the paths in the last two lines of code in the <code><head></code> </li>
+          <li>Update the file paths of the last two lines in the <code><head></code> for icons.fallback.css and lte-ie7.js</li>
         </ol>
       </div>
 
