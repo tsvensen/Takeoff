@@ -44,7 +44,7 @@ header {
 .container-hero {
   @include mq($header-mq) { min-height: $spacing *7; }
   @include mq($M)         { min-height: $spacing *11; }
-  @include mq($L)         { min-height: $spacing *18; }
+  @include mq($L)         { min-height: $spacing *16.8325; } // exact height of the image based on EMs, ((429px / 17px large breakpoint base font size) / spacing at 1.5em)
 }
 
 #hero {
