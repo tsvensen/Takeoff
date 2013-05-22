@@ -66,7 +66,7 @@ header {
 @media (min-width: 72em) {
   /* line 44, ../sass/02.elements.header.scss */
   .container-hero {
-    min-height: 27em;
+    min-height: 25.24875em;
   }
 }
 
