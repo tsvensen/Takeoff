@@ -124,11 +124,11 @@ module.exports = function(grunt) {
       }
     },
 
-    svgo: {
-      optimize: {
-        files: 'css/min/svg/*.svg'
-      }
-    },
+    // svgo: {
+    //   optimize: {
+    //     files: 'css/min/svg/*.svg'
+    //   }
+    // },
 
     /*sass: {
       styles: {
@@ -175,7 +175,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
 
   grunt.loadNpmTasks('grunt-grunticon');
-  grunt.loadNpmTasks('svgo-grunt');
+  // grunt.loadNpmTasks('svgo-grunt');
 
 
   /**
@@ -235,5 +235,5 @@ module.exports = function(grunt) {
    *
    * Build icon fallbacks. Optimize SVG.
    */
-  grunt.registerTask('icons', ['grunticon', 'svgo']);
+  grunt.registerTask('icons', ['grunticon']);
 };
