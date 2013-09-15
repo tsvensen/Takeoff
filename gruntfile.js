@@ -46,6 +46,9 @@ module.exports = function(grunt) {
     },
 
     uglify: {
+      options: {
+        sourceMap: function(path) { return path.replace(/.js/,".map"); }
+      },
       dist: {
         src: ['js/libs/z.scripts.concat.js'],
         dest: 'js/min/scripts.min.js'
